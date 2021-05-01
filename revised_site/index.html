@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jonathan Ho - Portfolio</title>
+    <link href="css/styles_a2.css" type="text/css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="css/bootstrap/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Smooth Scroll Script -->
+    <script>
+        $(document).ready(function() {
+            $("a").on('click', function(event) {
+
+                // Check id for click. Run if ID detected
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1000, function() {
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+</head>
+
+<body id="top">
+
+    <!-- Navigation Area -->
+    <div class="nav">
+        <div class="col-3">
+            <a href="#top"><img src="img/Jonathan_turqouise.png" alt="Jonathan Ho" id="logo"></a>
+        </div>
+        <div class="col-9">
+            <!-- Mobile Navigation  -->
+            <div class="navmobile" style="float:right;">
+                <button class="navmobilebtn">MENU</button>
+                <div class="navmobile-content">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#keySkills">Skills</a>
+                    <a href="#portfolio">Projects</a>
+                    <a href="#workexperience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <!-- End of Mobile Navigation  -->
+            <!-- Desktop Navigation  -->
+            <div id="navlinks">
+                <ul>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#workexperience">Experience</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#keySkills">Skills</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#home">Home</a></li>
+                </ul>
+            </div>
+            <!-- End of Desktop Navigation -->
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <div id="home">
+        <div class="container-fluid">
+            <div id="headerTextArea">
+                <p id="welcomeTitle"></p>
+                <p id="a1info"></p>
+                <script>
+                    var i = 0;
+                    var printText = 'Jonathan Ho';
+                    setTimeout(introText, 2000);
+
+                    function introText() {
+                        if (i < printText.length) {
+                            document.getElementById("welcomeTitle").innerHTML += printText.charAt(i);
+                            i++;
+                            setTimeout(introText, 250);
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Who am I?</h1>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="img/profile.jpg" alt="Jonathan Ho Profile Image" class="profileImage">
+                </div>
+                <div class="col-md-10">
+                    <p id="aboutDescription">My name is Jonathan Ho and I am a graphic designer, program developer, and web and UI/UX developer from Toronto, Ontario. I am currently studying at the University of Toronto for the Communication, Culture, Information, and Technology (CCIT) program, a joint program with Sheridan College, as well as Computer Science. I have always developed a passion to pursue a career in the communication technology and computer science field. I specialize in graphic design (logo, print and generic graphic design), web development, UI/UX development, and app and software development. With my expertise, I plan to enter a career field in software/mobile application development, graphic design or user experience developement.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Skills Section -->
+    <div id="keySkills">
+        <div class="containter">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="sectionTitle">My Skills</h1>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Skill Box 1: UI/UX -->
+                <div class="col-md-6">
+                    <div class="container">
+                        <div class=" skillsBox">
+                            <h3>UI/UX Design</h3>
+                            Adobe XD (iOS/Android) <span class="badge badge-info" style="float:right;">Expert</span>
+                            <div class="progress" style="height: 2px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p></p>
+                            Invision (UI/UX) <span class="badge badge-primary" style="float:right;">Proficient</span>
+                            <div class="progress" style="height: 2px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p></p>
+                            Unity (Environment/UI) <span class="badge badge-secondary" style="float:right;">Novice</span>
+                            <div class="progress" style="height: 2px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Box 2: Graphics -->
+                <div class="col-md-6">
+                    <div class="container">
+                        <div class="skillsBox">
+                            <h3>Graphics and Design</h3>
+                            Adobe Illustrator <span class="badge badge-primary" style="float:right;">Proficient</span>
+                            <div class="progress" style="height: 2px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p></p>
+                            Adobe Photoshop <span class="badge badge-warning" style="float:right;">Competent</span>
+                            <div class="progress" style="height: 2px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p></p>
+                            PSD and Vector Graphics <span class="badge badge-primary" style="float:right;">Proficient</span>
+                            <div class="progress" style="height: 2px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Skill Box 3: Web Design -->
+                <div class="col-md-6">
+                    <div class="container">
+                        <div class=" skillsBox">
+                            <h3>Web Design</h3>
+                            HTML5 <span class="badge badge-info" style="float:right;">Expert</span>
+                            <div class="progress" style="height: 2px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p></p>
+                            CSS3 <span class="badge badge-info" style="float:right;">Expert</span>
+                            <div class="progress" style="height: 2px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p></p>
+                            Wordpress <span class="badge badge-warning" style="float:right;">Competent</span>
+                            <div class="progress" style="height: 2px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p></p>
+                            Bootstrap <span class="badge badge-primary" style="float:right;">Proficient</span>
+                            <div class="progress" style="height: 2px;"> <span class="badge badge-info" style="float:right;">Expert</span>
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Box 4: Software -->
+                <div class="col-md-6">
+                    <div class="container">
+                        <div class=" skillsBox">
+                            <h3>Programming and Software Development</h3>
+                            Java <span class="badge badge-info" style="float:right;">Expert</span>
+                            <div class="progress" style="height: 2px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p></p>
+                            Python <span class="badge badge-primary" style="float:right;">Proficient</span>
+                            <div class="progress" style="height: 2px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p></p>
+                            Swift <span class="badge badge-secondary" style="float:right;">Novice</span>
+                            <div class="progress" style="height: 2px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p></p>
+                            C <span class="badge badge-light" style="float:right;">Advanced Beginner</span>
+                            <div class="progress" style="height: 2px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%; text-align: left;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Items Section -->
+    <div id="portfolio">
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <h1>Projects</h1>
+                <br />
+                <!-- Portfolio Item 1: Deer Sighting -->
+                <h2 class="subtitle"><b>'Deer Sighting' Snapchat Community Filter</b></h2>
+                <div class="row">
+                    <div class="col-xl-8 col-lg-6">
+                        <p>Upon starting my university studies at the University of Toronto Mississauga, I came across many deer sightings throughout the campus environment. Everytime I come across a deer sighting, I see many other students taking advantage of the sighting to take pictures and upload them on Snapchat. This inspired me to create a community geofilter dedicated to these peaceful and lovely animals that stride their way around campus. The goal of this geofilter is to allow students to capture the special moment of encountering a deer on campus and giving them a special filter that can go along with their posts. The geofilter was created using Adobe Illustrator CC and Adobe Photoshop CC.</p>
+                        <p>The geofilter is currently available to anyone with access to Snapchat on all devices and are within the university premises and parts of the surrounding area. This project is not affiliated with the University of Toronto or the Mississauga campus in any form.</p>
+                        <div class="alert alert-info statsbar" role="alert">
+                            <h4>Statistics as of February 10, 2018</h4>
+                            <ul>
+                                <li><strong>46,500+</strong> total uses on Snapchat (including posting on public stories and sending as a private message)</li>
+                                <li><strong>1,200,000+</strong> total views on Snapchat</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Click here to enlarge the images.</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="img/deer_thumbnail1.jpg">
+                                    <img src="img/deer_thumbnail1.jpg" alt="Deer Sighting Filter Demo (Image 1)" class="port-thumbnail center-block">
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="img/deer_thumbnail2.jpg">
+                                    <img src="img/deer_thumbnail2.jpg" alt="Deer Sighting Filter Mention (Image 2)" class="port-thumbnail center-block">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+                <!-- Portfolio Item 2: Terrian Explorer -->
+                <div class="row">
+                    <div class="col-xl-8 col-lg-6">
+                        <h2 class="subtitle"><b>'Terrain Explorer' Sample Unity Game</b></h2>
+                        <p>This project was created for the Immersive Environment Design course at University of Toronto. The purpose of this project is to explore the terrain and environment tools within Unity using the built-in environment, effects and camera packages. Terrain objects were created and modified using Blender, an open-source 3D design software. The environment also implements a first-person camera in order to explore the terrain area and to interact with the environment.</p>
+                        <p>This was an individual project. Trees and terrain textures were created by Unity.</p>
+                        <div class="alert alert-info statsbar" role="alert">
+                            <h4>Want to see it yourself?</h4>
+                            <p>Contact Jonathan Ho to obtain a playable game file of the 'Terrain Explorer'.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Click here to enlarge the images.</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="img/portfolio/terrian1.png">
+                                    <img src="img/portfolio/terrian1.png" alt="Deer Sighting Filter Demo (Image 1)" class="port-thumbnail center-block">
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="img/portfolio/terrian2.png">
+                                    <img src="img/portfolio/terrian2.png" alt="Deer Sighting Filter Mention (Image 2)" class="port-thumbnail center-block">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="img/portfolio/terrian3.png">
+                                    <img src="img/portfolio/terrian3.png" alt="Deer Sighting Filter Mention (Image 2)" class="port-thumbnail center-block">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Work Experience Section -->
+    <div id="workexperience">
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <h1>Work and Experience</h1>
+            </div>
+            <div class="row">
+                <div class="col-xl-9 col-lg-12">
+                    <div class="row">
+                        <div class="col-md-6 center-block">
+                            <div class="workPost">
+                                <h2 class="subtitle">Graphic Designer, Web/App Dev</h2>
+                                <p><strong>Creatic (2016 - Present)</strong></p>
+                                <p><strong>Key Roles and Responsibilities</strong></p>
+                                <ul>
+                                    <li>Graphic Design using PSD and Vector Graphics on Adobe Illustrator and Adobe Photoshop</li>
+                                    <li>Visual Content Creator on YouTube</li>
+                                    <li>Web and App Development</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <div class="workPost">
+                                <h2 class="subtitle">Co-Coordinator</h2>
+                                <p><strong>VMG eSports (2013 - 2016)</strong></p>
+                                <p><strong>Key Roles and Responsibilities</strong></p>
+                                <ul>
+                                    <li>Co-coordinated national e-sports tournaments</li>
+                                    <li>Maintained tournament games and schedules.</li>
+                                    <li>Worked with a team of coordinators and partners to provide an organized play experience for all players.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 center-block">
+                            <div class="workPost">
+                                <h2 class="subtitle">Founder, Chief Executive Officier</h2>
+                                <p><strong>VMG Network (2013 - 2016)</strong></p>
+                                <p><strong>Key Roles and Responsibilities</strong></p>
+                                <ul>
+                                    <li>YouTube Content Creator and Partnership Coordinator</li>
+                                    <li>Managed website, partner applications and a team to run daily operation.</li>
+                                    <li>Focus on helping YouTubers grow in the YT community.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <div class="workPost">
+                                <h2 class="subtitle">Interests in Employment</h2>
+                                <p>Some of my interests in employment include:</p>
+                                <ul>
+                                    <li>UI/UX Development</li>
+                                    <li>Wev Development</li>
+                                    <li>Mobile Application Design</li>
+                                    <li>Graphic Design</li>
+                                    <li>Marketing/PR</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-12">
+                    <img src="img/creatic-phone.png" id="phoneimage" class="center-block" alt="Phone Image with Creatic Website">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container-fluid">
+            <h1>Contact</h1>
+            <h4 style="font-weight: 400;" id="contactdetstext">Want to get in touch? You can contact me through the following ways:</h4>
+            <p></p>
+            <!-- CONTACT BUTTONS -->
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="contactCard rounded" onclick="pemailContact()">
+                        <br />
+                        <h3 style="font-weight: 200;">Personal Inquiries</h3>
+                        <br />
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="contactCard rounded" onclick="bemailContact()">
+                        <br />
+                        <h3 style="font-weight: 200;">Business Inquiries</h3>
+                        <br />
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="contactCard rounded" onclick="messengerContact()">
+                        <br />
+                        <h3 style="font-weight: 200;">Messenger</h3>
+                        <br />
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="contactCard rounded" onclick="mailContact()">
+                        <br />
+                        <h3 style="font-weight: 200;">Mail</h3>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <br />
+            <p id="contactText"></p>
+            <script>
+                function pemailContact() {
+                    document.getElementById("contactText").innerHTML = 'For personal inquiries, you can email me at: <div class="alert alert-light" role="alert"> jonathanck (dot) ho (at) mail (dot) utoronto (dot) ca <span style="float:right"><button onclick="closeContact()"><b>X</b></button></span></div><br />';
+                }
+
+                function bemailContact() {
+                    document.getElementById("contactText").innerHTML = 'For business inquiries, you can email me at: <div class="alert alert-light" role="alert"> jonathan (at) creatic (dot) xyz <span style="float:right"><button onclick="closeContact()"><b>X</b></button></span></div><br />';
+                }
+
+                function messengerContact() {
+                    document.getElementById("contactText").innerHTML = 'Contact me via Facebook Messenger: <div class="alert alert-light" role="alert"> <a href="http://m.me/CreaticXYZ" title="Creatic on Facebook Messenger" alt="Link to Creatic on FB Messenger">Click Here to Chat</a> <span style="float:right"><button onclick="closeContact()"><b>X</b></button></span></div><br />';
+                }
+
+                function mailContact() {
+                    document.getElementById("contactText").innerHTML = '<div class="alert alert-danger" role="alert"> I am currently not accepting mail at this time. <span style="float:right"><button onclick="closeContact()"><b>X</b></button></span></div><br />';
+                }
+
+                function closeContact() {
+                    document.getElementById("contactText").innerHTML = '';
+                }
+            </script>
+            <!-- SOCIAL MEDIA BUTTONS -->
+            <h2 style="font-weight: 200;"><b>Find Me on Social Media</b></h2>
+            <p>All links will open on a new tab.</p>
+            <button href="https://www.linkedin.com/in/jonathan-ck-ho/" target="_blank" class="hollow-button btn-outline-light">LinkedIn</button> &nbsp;
+            <a href="https://www.facebook.com/jonjonnn.ho" target="_blank" class="hollow-button btn-outline-light">Facebook</a> &nbsp;
+            <a href="https://www.twitter.com/JonathanHo75" target="_blank" class="hollow-button btn-outline-light">Twitter</a> &nbsp;
+            <a href="https://www.instagram.com/jonathann_ho" target="_blank" class="hollow-button btn-outline-light">Instagram</a> &nbsp;
+            <a href="https://www.youtube.com/JonHoOfficial" target="_blank" class="hollow-button btn-outline-light">YouTube</a>&nbsp;
+            <p><br /></p>
+            <h3 style="font-size: 20px;"><b>More on the Communication, Culture, Information, and Technology Program at University of Toronto Mississauga</b></h3>
+            <br />
+            <h5 style="font-weight: 300;"><a href="http://utm.utoronto.ca/iccit" target="_blank" class="hollow-button btn-outline-light">Click here to learn more</a></h5>
+            <br />
+        </div>
+    </div>
+
+    <!-- Footer Area -->
+    <footer>
+        <p>&copy; 2018 Jonathan Ho. All Rights Reserved.<br /> Designed for CCT286: Interactive Media Design</p>
+    </footer>
+</body>
+
+</html>

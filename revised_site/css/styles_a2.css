@@ -1,0 +1,733 @@
+/* ==== FONT FACES ==== */
+
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: RobotoLight;
+    src: url(fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: RobotoMedium;
+    src: url(fonts/Roboto/Roboto-Medium.ttf);
+}
+
+
+/* ==== OVERALL WEB STYLES ==== */
+
+body {
+    color: black;
+    height: 100vh;
+    width: auto;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+a {
+    color: #00b3b3 !important;
+    text-decoration: none !important;
+}
+
+a:visited {
+    color: #00b3b3 !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #33dddd !important;
+    text-decoration: none !important;
+}
+
+h1 h2 h3 h4 h5 h6 {
+    font-family: RobotoMedium, Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+h1 {
+    color: white;
+    font-size: 55px !important;
+}
+
+h2 {
+    color: white;
+    font-size: 40px !important;
+}
+
+h3 {
+    color: white;
+    font-family: RobotoLight, Roboto, Helvetica, Arial, sans-serif !important;
+    font-size: 30px !important;
+}
+
+p {
+    color: white !important;
+    font-size: 16px !important;
+}
+
+li {
+    color: #cccccc;
+}
+
+hr {
+    background-color: #cccccc;
+}
+
+
+/* ==== NAVIGATION BAR ==== */
+
+
+/* ---- Logo ---- */
+
+#logo {
+    height: 45px;
+}
+
+
+/* ---- Regular Navigation ---- */
+
+.nav {
+    color: white;
+    height: 50px;
+    background-color: black;
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    padding: 5px;
+    vertical-align: middle;
+    border-bottom: 3px solid #006666;
+}
+
+#navlinks {
+    height: 100%;
+    text-align: middle;
+}
+
+#navlinks ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    line-height: 40px;
+}
+
+#navlinks li {
+    display: inline;
+    width: 120px;
+}
+
+#navlinks a {
+    color: white !important;
+    text-align: center;
+    padding: auto 10px;
+    text-decoration: none;
+    float: right;
+    width: 95px;
+    height: 100%;
+}
+
+#navlinks a:hover {
+    color: white;
+    background-color: #2eb8b8;
+    overflow: hidden;
+    text-decoration: none;
+    -webkit-animation-name: navbarButton;
+    -webkit-animation-duration: 0.75s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-name: navbarButton;
+    -moz-animation-duration: 0.75s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: ease-in;
+    -o-animation-name: navbarButton;
+    -o-animation-duration: 0.75s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: ease-in;
+    animation-name: navbarButton;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes navbarButton {
+    0% {
+        border-radius: 0px;
+    }
+    100% {
+        border-radius: 4.5px;
+    }
+}
+
+@-moz-keyframes navbarButton {
+    0% {
+        border-radius: 0px;
+    }
+    100% {
+        border-radius: 4.5px;
+    }
+}
+
+@-o-keyframes navbarButton {
+    0% {
+        border-radius: 0px;
+    }
+    100% {
+        border-radius: 4.5px;
+    }
+}
+
+@keyframes navbarButton {
+    0% {
+        border-radius: 0px;
+    }
+    100% {
+        border-radius: 4.5px;
+    }
+}
+
+
+/* ---- Mobile Navigation ---- */
+
+.navmobilebtn {
+    /* Navigation Button */
+    color: #bbbbbb;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.5px solid #bbbbbb;
+    border-radius: 1px;
+    width: 70px;
+    height: 35px;
+    display: none;
+}
+
+.navmobile {
+    /* Overall Mobile Nav */
+    position: relative;
+    display: inline-block;
+}
+
+.navmobile-content {
+    /* Inside Nav */
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 250px;
+    z-index: 50;
+    left: auto;
+    right: 0;
+}
+
+.navmobile-content a {
+    /* Nav Links */
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    border-bottom: 1px solid #eeeeee;
+    display: block;
+}
+
+.navmobile-content a:hover {
+    background-color: #009999 !important;
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.navmobile-content a:active {
+    background-color: #004d4d !important;
+    text-decoration: none !important;
+    color: white !important;
+}
+
+
+/* Dropdown menu becomes visible upon hovering over nav icon */
+
+.navmobile:hover .navmobile-content {
+    display: block;
+    text-decoration: none;
+}
+
+
+/* Change background colour of nav icon upon hovering */
+
+.navmobile:hover .navmobilebtn {
+    background-color: #00b3b3;
+}
+
+
+/* ==== HOME WELCOME SECTION ==== */
+
+#home {
+    background-color: #33cccc;
+    background-size: cover;
+    background-attachment: fixed;
+    /*    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.2) inset;*/
+    box-shadow: inset 0 0 10em 1em #000000;
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-height: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    -webkit-animation-name: welcomeBG;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-name: welcomeBG;
+    -moz-animation-duration: 2s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: ease-in;
+    -o-animation-name: welcomeBG;
+    -o-animation-duration: 2s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: ease-in;
+    animation-name: welcomeBG;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes welcomeBG {
+    0% {
+        opacity: 0;
+        background-color: #000000;
+    }
+    100% {
+        background-image: url(../img/jh3.JPG);
+    }
+}
+
+@-moz-keyframes welcomeBG {
+    0% {
+        opacity: 0;
+        background-color: #000000;
+    }
+    100% {
+        background-image: url(../img/jh3.JPG);
+    }
+}
+
+@-o-keyframes welcomeBG {
+    0% {
+        opacity: 0;
+        background-color: #000000;
+    }
+    100% {
+        background-image: url(../img/jh3.JPG);
+    }
+}
+
+@keyframes welcomeBG {
+    0% {
+        opacity: 0;
+        background-color: #000000;
+    }
+    100% {
+        background-image: url(../img/jh3.JPG);
+    }
+}
+
+#welcomeTitle {
+    margin: 0px 0px 0px 15px;
+    color: white;
+    font-size: 100px !important;
+}
+
+#headerTextArea {
+    vertical-align: middle;
+    margin: 40vh 0px 14% 0px;
+}
+
+
+/* ==== ABOUT SECTION ==== */
+
+#about {
+    background-color: #29a3a3;
+    padding: 55px 10px;
+}
+
+#about h1 {
+    color: white;
+}
+
+#aboutDescription {
+    color: white;
+    font-size: 22px !important;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding: 0px 0px;
+}
+
+.profileImage {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    margin: 0px auto;
+}
+
+
+/* ==== KEY SKILLS SECTION ==== */
+
+#keySkills {
+    padding: 5px 10px;
+    background-image: url("../img/bg1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.8) inset;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    height: auto;
+    width: 100% !important;
+    overflow: hidden;
+    position: relative;
+}
+
+#keySkills .sectionTitle {
+    color: white;
+    margin-top: 5%;
+    padding: 15px;
+}
+
+#keySkills .sectionTitle h1 {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.skillsBox {
+    color: white;
+    background-color: rgba(0, 68, 102, 0.9);
+    padding: 35px 20px;
+    margin: 25px 0px;
+}
+
+
+/* ==== PORTFOLIO ITEMS SECTION ==== */
+
+#portfolio {
+    padding: 55px 0px;
+    color: white;
+    background-color: #006bb3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    height: autoov
+}
+
+.port-thumbnail {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 5px;
+}
+
+.port-thumbnail:hover {
+    border: 2px solid white;
+}
+
+.statsbar {
+    color: #eeeeee !important;
+    background-color: #004d80 !important;
+    border: 2px solid #dddddd !important;
+}
+
+.statsbar h4 {
+    color: #eeeeee !important;
+}
+
+.thumbnail {
+    max-width: 50px;
+    width: auto;
+}
+
+
+/* ==== WORK AND EXPERIENCE SECTION ==== */
+
+#workexperience {
+    color: white;
+    padding: 55px 0px;
+    background-image: url("../img/IMG_0136.jpg");
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.6) inset;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    height: auto;
+}
+
+.workPost {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 35px 20px;
+    margin: 10px;
+}
+
+#phoneimage {
+    height: auto;
+    max-height: 550px;
+    margin: auto;
+    text-align: center;
+    left: auto;
+    right: auto;
+    display: block;
+}
+
+
+/* ==== CONTACT SECTION ==== */
+
+#contact {
+    /* border-top: 3px solid #33cccc; */
+    color: white;
+    padding: 55px 10px;
+    /* background-image: url("../img/contact_pen.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    box-shadow: inset 0 0 10em 1em #000000;*/
+    background-color: #29a3a3;
+    height: auto;
+}
+
+.contactCard {
+    color: white;
+    background-color: #008080;
+    border: 2px solid #cccccc;
+    border-radius: 2px;
+    height: inherit;
+    padding: 15px;
+    margin: 5px;
+    display: block;
+    width: auto;
+    text-align: center;
+}
+
+.contactCard:hover {
+    color: white;
+    background-color: #33cccc;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    height: inherit;
+    padding: 15px;
+    margin: 5px;
+    display: block;
+    width: auto;
+    text-align: center;
+    -webkit-animation-name: contactButtons;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: contactButtons;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-name: contactButtons;
+    -o-animation-duration: 0.5s;
+    -o-animation-fill-mode: forwards;
+    animation-name: contactButtons;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes contactButtons {
+    0% {
+        background-color: #008080;
+    }
+    100% {
+        background-color: #33cccc;
+    }
+}
+
+@-moz-keyframes contactButtons {
+    0% {
+        background-color: #008080;
+    }
+    100% {
+        background-color: #33cccc;
+    }
+}
+
+@-o-keyframes contactButtons {
+    0% {
+        background-color: #008080;
+    }
+    100% {
+        background-color: #33cccc;
+    }
+}
+
+@keyframes contactButtons {
+    0% {
+        background-color: #008080;
+    }
+    100% {
+        background-color: #33cccc;
+    }
+}
+
+.contactCard:active {
+    color: white;
+    background-color: #33cccc;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    height: inherit;
+    padding: 15px;
+    margin: 5px;
+    display: block;
+    width: auto;
+    text-align: center;
+    -webkit-animation-name: contactClickedButtons;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: contactClickedButtons;
+    -moz-animation-duration: 3s;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-name: contactClickedButtons;
+    -o-animation-duration: 3s;
+    -o-animation-fill-mode: forwards;
+    animation-name: contactClickedButtons;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes contactClickedButtons {
+    0% {
+        background-color: #33cccc;
+    }
+    50% {
+        background-color: #71dada;
+    }
+    100% {
+        background-color: #33cccc;
+    }
+}
+
+@-moz-keyframes contactClickedButtons {
+    0% {
+        background-color: #33cccc;
+    }
+    50% {
+        background-color: #71dada;
+    }
+    100% {
+        background-color: #33cccc;
+    }
+}
+
+@-o-keyframes contactClickedButtons {
+    0% {
+        background-color: #33cccc;
+    }
+    50% {
+        background-color: #71dada;
+    }
+    100% {
+        background-color: #33cccc;
+    }
+}
+
+@keyframes contactClickedButtons {
+    0% {
+        background-color: #33cccc;
+    }
+    50% {
+        background-color: #71dada;
+    }
+    100% {
+        background-color: #33cccc;
+    }
+}
+
+.socialButton {
+    background-color: #006bb3 !important;
+    color: white !important;
+    font: RobotoLight, Roboto, Helvetica, Arial, sans-serif !important;
+    font-weight: 200 !important;
+    margin: 5px 5px;
+}
+
+.socialButton:hover {
+    background-color: #004d66 !important;
+    color: white !important;
+    text-decoration: none;
+}
+
+
+/* ==== FOOTER SECTION ==== */
+
+footer {
+    color: white;
+    background-color: black;
+    font-size: 12px;
+    padding: 1px 10px;
+    padding-top: 4px;
+}
+
+
+/* ==== GENERAL STYLE ==== */
+
+.hollow-button {
+    border: 2px solid #ffffff;
+    color: white !important;
+    border-radius: 5px;
+    font-weight: 200;
+    padding: 10px;
+    margin: 20px 0px;
+    position: relative;
+}
+
+.hollow-button:hover {
+    color: #004d66 !important;
+}
+
+.hollow-button:visited {
+    color: white !important;
+}
+
+.subtitle {
+    font-size: 30px !important;
+}
+
+
+/* ==== MEDIA RESPONSIVENESS CODE ==== */
+
+@media screen and (max-width: 900px) {
+    #navlinks {
+        display: none;
+    }
+    .navmobilebtn {
+        display: inherit;
+    }
+    #welcomeTitle {
+        font-size: 70px !important;
+    }
+    #phoneimage {
+        display: none !important;
+    }
+    #aboutDescription {
+        color: white;
+        font-size: 22px !important;
+        margin-left: 25px;
+        margin-right: 25px;
+        padding: 0px 0px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #welcomeTitle {
+        font-size: 45px !important;
+    }
+    #aboutDescription {
+        font-size: 18px !important;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 0px 0px;
+    }
+    #home {
+        background-size: auto 100vh !important;
+    }
+    #contactdetstext {
+        font-size: 15px !important;
+    }
+}
